@@ -1,0 +1,14 @@
+// 本配置文件用于编写编译VC++项目/源代码
+{
+    // Below 4 lines are configuration for C/C++ Compile Run extension
+    //"c-cpp-compile-run.c-compiler": "C:\\Program Files (x86)\\Microsoft Visual Studio\\2017\\Community\\VC\\Tools\\MSVC\\14.16.27023\\bin\\Hostx64\\x64\\cl.exe",
+    //"c-cpp-compile-run.c-flags": "/Wall /Zi /std:c11",
+    //"c-cpp-compile-run.cpp-compiler": "C:\\Program Files (x86)\\Microsoft Visual Studio\\2017\\Community\\VC\\Tools\\MSVC\\14.16.27023\\bin\\Hostx64\\x64\\cl.exe",
+    //"c-cpp-compile-run.cpp-flags": "/Wall /Zi /std:c++17",
+    //"C_Cpp.intelliSenseEngineFallback": "Enabled",
+    //"C_Cpp.default.intelliSenseMode": "msvc-x64",
+    "python.jediEnabled": true,
+    "python.linting.pylintEnabled": true,
+    "python.linting.enabled": true
+    
+}

@@ -1,0 +1,34 @@
+{
+	"folders": [
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"files.associations": {
+			"*.tpp": "cpp",
+			"array": "cpp",
+			"iostream": "cpp",
+			"xstring": "cpp",
+			"ctime": "cpp",
+			"istream": "cpp",
+			"ostream": "cpp",
+			"ios": "cpp",
+			"xlocnum": "cpp",
+			"cmath": "cpp"
+		},
+		"terminal.integrated.shell.windows": "cmd.exe",
+		"python.pythonPath": "C:\\ProgramData\\Anaconda3\\python.exe",
+		"bracketPairColorizer.consecutivePairColors": [
+			"()",
+			"[]",
+			"{}",
+			[
+				"Gold",
+				"Orchid",
+				"Blue"
+			],
+			"Red"
+		]
+	}
+}

@@ -1,0 +1,41 @@
+// Configuring tasks.json for C/C++ debugging 
+
+// Available variables which can be used inside of strings.
+// ${workspaceRoot}: the root folder of the team        
+// ${file}: the current opened file                     
+// ${fileBasename}: the current opened file's basename 
+// ${fileDirname}: the current opened file's dirname    
+// ${fileExtname}: the current opened file's extension  
+// ${cwd}: the current working directory of the spawned process
+
+
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "build",
+            "type": "shell",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "focus": false,
+                "panel": "shared"
+            },
+            "windows": {
+                "command": "cl.exe",
+                "args": [
+                    "/Zi",
+                    "/std:c++17",
+                    "/Fe \"${fileDirname}\\${fileBasenameNoExtension}.exe\"",
+                    "\"${file}\""
+                ]
+            }
+        }
+    ]
+}

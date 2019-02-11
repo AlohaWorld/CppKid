@@ -1,0 +1,38 @@
+
+{
+    "env":{
+        "windowsKitInclude" : "C:/Program Files (x86)Windows Kits/10/Include",
+        "windowsSdkVersion": "10.0.17763.0"
+    },
+    "configurations": [
+        {
+            "name": "Win32",
+            "browse": {
+                "path": [
+                    "${workspaceFolder}"
+                ],
+                "limitSymbolsToIncludedHeaders": true
+            },
+            "includePath": [
+                "${workspaceFolder}",
+                "C:/Program Files (x86)/Microsoft Visual Studio/2017/Community/VC/Tools/MSVC/14.16.27023/include",
+                "C:/Program Files (x86)/Windows Kits/10/Include/10.0.17763.0/um",
+                "C:/Program Files (x86)/Windows Kits/10/Include/10.0.17763.0/ucrt",
+                "C:/Program Files (x86)/Windows Kits/10/Include/10.0.17763.0/winrt",
+                "C:/Program Files (x86)/Windows Kits/10/Include/10.0.17763.0/shared"
+            ],
+            "defines": [
+                "_DEBUG",
+                "UNICODE",
+                "_UNICODE"
+            ],
+            "cStandard": "c11",
+            "cppStandard": "c++17",
+            "intelliSenseMode": "msvc-x64",
+            "windowsSdkVersion": "10.0.17763.0",
+            "compilerPath": "C:\\Program Files (x86)\\Microsoft Visual Studio\\2017\\Community\\VC\\Tools\\MSVC\\14.16.27023\\bin\\Hostx64\\x64\\cl.exe"
+
+        }
+    ],
+    "version": 4
+}

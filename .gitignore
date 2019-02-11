@@ -1,0 +1,6 @@
+Debug
+Release
+*.ipch
+*.db
+*.db-shm
+*.db-wal

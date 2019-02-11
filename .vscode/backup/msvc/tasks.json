@@ -1,0 +1,73 @@
+// 本配置文件用于编写编译VC++项目/源代码
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Build",
+            "command": "cl",
+            "args": [
+                "/Zi",
+                "/Wall",
+                "/EHsc",
+                "/std:c++17",
+                "/Zc:__cplusplus",
+                "${file}"
+            ],
+            "windows": {
+                "args": [
+                    "/Zi",
+                    "/W4",
+                    "/EHsc",
+                    "/std:c++17",
+                    "/showIncludes",
+                    "/Zc:__cplusplus",
+                    "/Fe:${fileDirname}\\Debug\\${fileBasenameNoExtension}.exe",
+                    "/Fd:${fileDirname}\\Debug\\${fileBasenameNoExtension}.pdb",
+                    "/Fo:${fileDirname}\\Debug\\${fileBasenameNoExtension}.obj",
+                    "/Fp:${fileDirname}\\Debug\\${fileBasenameNoExtension}.pch",
+                    "${file}"
+                ]
+            },
+            "presentation": {
+                "reveal": "always",
+                "echo": false,
+                "focus": true
+            },
+            "problemMatcher": "$msCompile",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        },
+        {
+            "label": "Run",
+            "type": "shell",
+            "dependsOn": "Build",
+            "command": "${fileDirname}/Debug/${fileBasenameNoExtension}.exe",
+            "windows": {
+                "command": "${fileDirname}\\Debug\\${fileBasenameNoExtension}.exe"
+            },
+            "args": [],
+            "presentation": {
+                "reveal": "always",
+                "focus": true
+            },
+            "problemMatcher": [],
+            "group": {
+                "kind": "test",
+                "isDefault": true
+            }
+        }
+    ],
+    "options": {
+        "env": {
+            "binDir": "bin", 
+            "TargetExt": "exe",
+            "compilerPath": "C:\\Program Files (x86)\\Microsoft Visual Studio\\2017\\Community\\VC\\Tools\\MSVC\\14.16.27023\\bin\\Hostx64\\x64\\cl.exe",
+            "vcvarsall": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\2017\\Community\\VC\\Auxiliary\\Build\\vcvarsall.bat\" x64"
+        }
+    }
+
+}
