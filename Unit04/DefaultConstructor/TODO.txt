@@ -1,0 +1,7 @@
+DefaultConstructor
+
+1. 编写两个类Circle和Square，前者有默认构造函数，后者无默认构造函数
+
+2. 编写一个Combo类，有一个Circle对象一个Square对象
+
+3. 在Combo的构造函数中初始化内嵌对象

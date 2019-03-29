@@ -4,3 +4,5 @@ Release
 *.db
 *.db-shm
 *.db-wal
+/.metadata/
+/.recommenders/

@@ -1,0 +1,13 @@
+InClassInitializer
+
+1. 基础数据类型就地初始化
+  copy-initialize
+  小括号初始化  
+  
+2. 对象类型成员就地初始化
+  direct list-initialize
+  字符串常量初始化
+
+3. 数组类型成员初始化
+  自动推断数组大小 
+  自动推断数组类型

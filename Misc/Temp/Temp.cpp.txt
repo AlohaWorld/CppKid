@@ -1,0 +1,67 @@
+#include <iostream>
+using namespace std;
+
+#define SHOW_DEVELOPER_MESSAGES
+#include "../../include/developer.h"
+
+class Circle {
+public:
+  Circle() { // 无参数
+    radius = 1.0;
+    /*函数体可为空*/
+  }
+  Circle(double r = 1.0) // 所有参数都有默认值
+    : radius{ r } {
+  }
+private:
+  double radius;
+};
+
+class X {
+private:
+  Circle c1;
+public:
+  X() {}
+};
+
+int main() {
+  char iAmHalfWidthSemiColon = ';';
+
+  DEVELOPER_FIXME("We can NOT define a unicode character as macro name.");
+  auto x{ 12 };
+  cout << x << endl;
+
+
+#if 0
+  auto a{ 0 } , b{ 0 } , c = 1;
+
+  cin >> a >> b >> c;
+
+  cout << a << " " << b << endl;
+
+  //char* s1 = new char(97.f);
+  //std::cout << s1 << std::endl;
+
+  char* s2 = new char{ 97 };
+  std::cout << s2 << std::endl;
+
+  auto s3 = new char{ 'a' };
+  std::cout << s3 << std::endl;
+
+  using UInt = unsigned int;
+  UInt x = 42u;
+
+  std::cout << static_cast<double>(1) / 2 << std::endl;
+  std::cout << static_cast<double>(1 / 2) << std::endl;
+
+  int arr[] = { 2, 1, 4, 3, 5 };
+  for (auto i : arr) {
+    std::cout << i << std::endl;
+  }
+  for (auto& i : arr) {
+    i = 2 * i;
+  }
+#endif
+  std::cin.get();
+  return (0);
+}

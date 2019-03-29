@@ -1,5 +1,5 @@
 #include <iostream>
-#if 1
+#if 0
 int fun1()   { return 10;  }
 char fun2()  { return 'g'; }
 

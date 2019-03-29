@@ -1,0 +1,67 @@
+\hypertarget{Helper_8h}{}\section{Helper.\+h 文件参考}
+\label{Helper_8h}\index{Helper.h@{Helper.h}}
+
+
+Declares the helper macro and functions  
+
+
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+\subsection*{宏定义}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{Helper_8h_ad61844ab25ea35139950e67e9693bc9f}{P\+R\+I\+NT}}(x)~std\+::cout $<$$<$ \#x $<$$<$ \char`\"{}\+: \char`\"{} $<$$<$ x $<$$<$ std\+::endl;
+\begin{DoxyCompactList}\small\item\em A macro that defines print \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{函数}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename T $>$ }\\std\+::ostream \& \mbox{\hyperlink{Helper_8h_af3de10eabd3add1da6ed9abd92e0ab07}{operator$<$$<$}} (std\+::ostream \&s, const std\+::vector$<$ T $>$ \&v)
+\begin{DoxyCompactList}\small\item\em Output the elements in a vector object. Copy from \href{https://en.cppreference.com/w/cpp/container/vector/vector}{\texttt{ https\+://en.\+cppreference.\+com/w/cpp/container/vector/vector}} \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{详细描述}
+Declares the helper macro and functions 
+
+
+
+\subsection{宏定义说明}
+\mbox{\Hypertarget{Helper_8h_ad61844ab25ea35139950e67e9693bc9f}\label{Helper_8h_ad61844ab25ea35139950e67e9693bc9f}} 
+\index{Helper.h@{Helper.h}!PRINT@{PRINT}}
+\index{PRINT@{PRINT}!Helper.h@{Helper.h}}
+\subsubsection{\texorpdfstring{PRINT}{PRINT}}
+{\footnotesize\ttfamily \#define P\+R\+I\+NT(\begin{DoxyParamCaption}\item[{}]{x }\end{DoxyParamCaption})~std\+::cout $<$$<$ \#x $<$$<$ \char`\"{}\+: \char`\"{} $<$$<$ x $<$$<$ std\+::endl;}
+
+
+
+A macro that defines print 
+
+
+\begin{DoxyParams}{参数}
+{\em x} & A variable to print. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{函数说明}
+\mbox{\Hypertarget{Helper_8h_af3de10eabd3add1da6ed9abd92e0ab07}\label{Helper_8h_af3de10eabd3add1da6ed9abd92e0ab07}} 
+\index{Helper.h@{Helper.h}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!Helper.h@{Helper.h}}
+\subsubsection{\texorpdfstring{operator$<$$<$()}{operator<<()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+template$<$ typename T $>$ std\+::ostream \& operator$<$$<$ (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{s,  }\item[{const std\+::vector$<$ T $>$ \&}]{v }\end{DoxyParamCaption})}
+
+
+
+Output the elements in a vector object. Copy from \href{https://en.cppreference.com/w/cpp/container/vector/vector}{\texttt{ https\+://en.\+cppreference.\+com/w/cpp/container/vector/vector}} 
+
+
+\begin{DoxyParams}[1]{参数}
+\mbox{\texttt{ in,out}}  & {\em s} & A std\+::ostream to output to. \\
+\hline
+ & {\em v} & A std\+::vector$<$T$>$ to process.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+The std\+::ostream object reference. 
+\end{DoxyReturn}

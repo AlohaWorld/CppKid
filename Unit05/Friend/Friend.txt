@@ -1,0 +1,45 @@
+#include <iostream>
+
+#include "date.h"
+
+using namespace std::chrono;
+
+using namespace date;
+class Date1 {
+private:
+  date::year_month_day ymd = 2000_y / January / 1; //{2000,1,1};
+
+public:
+  Date() = default;
+  Date(date::year_month_day oneDay) {
+    ymd = oneDay;
+  }
+  friend class Kid;
+  friend void printDate(Date& oneDay);
+};
+
+class Kid {
+  Date birthday;
+public:
+  Kid() { birthday.ymd = 2017_y / April / 1; }
+  auto age() {
+    auto today = date::year_month_day{ date::floor<days>(system_clock::now()) };
+    auto days = sys_days(today) - sys_days(birthday.ymd);
+    return floor<years>(days).count();
+  }
+};
+
+void printDate(Date& oneDay) {
+  std::cout << oneDay.ymd << std::endl;
+}
+
+int main() {
+  Date nationalDay{ 2019_y / 10 / 1 };
+  printDate(nationalDay);
+
+  Kid kid;
+  std::cout << kid.age();
+
+  std::cin.get();
+  return 0;
+}

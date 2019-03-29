@@ -1,0 +1,6 @@
+工程：ObjectAsReturnValue
+
+1. 修改setter函数，返回Circle对象
+2. 调用setter函数后继续调用getArea()
+3. 连续两次调用setter函数，观察setter函数的返回对象与原对象的关系
+4. 将setter函数值改为引用类型

@@ -1,0 +1,4 @@
+1. 修改Circle类，添加radius的getter/setter函数
+2. 创建Circle数组并初始化数组元素
+3. 修改某个元素的半径
+4. 求数组中所有圆对象的总面积

@@ -1,4 +1,4 @@
-#include<iostream>
+#include <iostream>
 
 int main() {
     if (__cplusplus == 201703L) std::cout << "C++17\n";
@@ -7,7 +7,8 @@ int main() {
     else if (__cplusplus == 199711L) std::cout << "C++98\n";
     else std::cout << "pre-standard C++\n";
 
-    cin.get();
+    std::cout << "Press ANY key to exit.";
+    std::cin.get();
 
-    return 0;
+    return (0);
 }

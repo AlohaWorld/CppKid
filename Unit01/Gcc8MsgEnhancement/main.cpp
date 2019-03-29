@@ -10,7 +10,7 @@ private:
 };
 
 void test(foo *ptr) {
-  if (ptr->m_ratio >= 0.5)
+  //if (ptr->m_ratio >= 0.5)
     ;// etc
 }
 int main(int argc, char** argv) {
