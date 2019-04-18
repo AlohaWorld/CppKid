@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="FullSignature">
+  <Comment CommentText="向量元素&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;向量加法&#xD;&#xA;第i个元素&#xD;&#xA;比较两个向量的大小（长度）&#xD;&#xA;向量自减1&#xD;&#xA;向量的方向（角度）&#xD;&#xA;向量的点积&#xD;&#xA;判断两个向量是否相等&#xD;&#xA;向量自加1&#xD;&#xA;向量的长度（模/范数）&#xD;&#xA;向量的数乘&#xD;&#xA;向量求反&#xD;&#xA;向量剑法&#xD;&#xA;向量信息转字符串&#xD;&#xA;默认构造函数，构造向量(1,1)&#xD;&#xA;构造函数，构造向量(x, y)">
+    <Position X="3.387" Y="2.459" Height="3.654" Width="2.241" />
+  </Comment>
+  <Class Name="Vec2D">
+    <Position X="0.5" Y="1.75" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAEAABCAIAAAAAAsBAYAAwAAAAAAgQAAAAACAAA=</HashCode>
+      <FileName>Vec2D.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Microsoft YaHei UI" Size="9" />
+</ClassDiagram>

@@ -1,0 +1,71 @@
+本部分要展示的内容如下：
+
+展示C++17中的 path 对象的用法
+
+int main() {
+  // 定义路径，使用生字符串、转义字符串、正斜杠字符串
+
+  // 输出默认文件分隔符
+
+  // 判断是否是常规文件，如果是，输出文件大小
+
+  // 判断是否是目录，如果是目录，列出其子目录
+
+  // 判断路径是否存在
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// 必须打开C++17支持
+#include <iostream>
+#include <filesystem>
+#include <string>
+namespace fs = std::filesystem;
+
+int main() {
+  // 定义路径，使用生字符串、转义字符串、正斜杠字符串
+  std::string file(R"(D:\cpp\Example\Unit07\CheckPath\temp.txt)"); // 绝对路径，使用生字符串表示
+  // std::string file2("D:\\cpp\\Example\\Unit07\\CheckPath\\temp.txt");
+
+  // 输出默认文件分隔符
+  std::wcout << "文件分隔符是： " << fs::path::preferred_separator << std::endl;
+
+  // fs::path p{ file };  // p 代表一个路径 (可能不存在)
+  fs::path p{ R"(D:\cpp)" };
+
+
+  // 判断是否是常规文件，是则输出文件大小
+  if (fs::is_regular_file(p)) {          // path p是一个普通文件吗？
+    std::cout << p << " 大小是 " << file_size(p) << " 字节\n";
+  }
+  // 判断是否是目录，如果是目录，列出其子目录
+  else if (fs::is_directory(p)) {        // 路径 p 是一个目录吗?
+    std::cout << p << " 是一个目录，包含:\n";
+    for (auto& e : fs::directory_iterator{ p }) {
+      std::cout << "  " << e.path() << '\n';
+    }
+  }
+  // 判断路径是否存在
+  else if (fs::exists(p)) {              // 路径 p 存在否？
+    std::cout << p << " 是一个特殊文件\n";
+  }
+  else {
+    std::cout << "路径 " << p << " 不存在\n";
+  }
+
+  std::cin.get();
+}

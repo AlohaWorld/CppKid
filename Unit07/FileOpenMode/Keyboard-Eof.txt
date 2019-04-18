@@ -1,0 +1,4 @@
+From the command-line, when you are
+running your program you can send EOF
+to the program with Ctrl - D (Unix)
+or CTRL - Z (Microsoft).
