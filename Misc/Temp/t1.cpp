@@ -10,12 +10,44 @@ using namespace std::string_literals;
 
 class B {
 private:
+  /** @brief     Zero-based index of the */
   int i{ 0 };
 public:
   B() = default;
 };
 
 int main() {
+
+  fstream fs("out.txt", ios::binary|ios::trunc);
+  char s[] = "Hello\nWorld";
+  fs.write(s, sizeof(s));
+
+  xxx_stream& seekg(pos_type pos);
+  xxx_stream& seekg(off_type off, std::ios_base::seekdir dir);
+
+  long int x {0};
+  int a[3] {21,42,63};
+  std::string str{"Hello"};
+  char* p1 = reinterpret_cast<char*>(&x);  // variable address
+  char* p2 = reinterpret_cast<char*>(a);  // array address
+  char* p3 = reinterpret_cast<char*>(&str);  // object address
+  streamObject.read(char * address, int size)
+
+  bool x[ 5 ]{ false, true };
+
+  for (auto& i : x) {
+    std::cout << std::boolalpha << i << " ";
+  }
+
+  std::string s{ R"(Hello
+World)" };
+
+  char q1 , q2;
+  std::cin >> q1;
+  q2 = std::cin.get();
+  std::cout << "q2 as char:" << q2 << " over" << std::endl;
+  std::cout << "q2 as int :" << static_cast<int>(q2) << " over" << std::endl;
+
   B b1;
   auto b2{ new B{} };
   std::cout << typeid(B).name() << std::endl;
@@ -25,6 +57,7 @@ int main() {
   std::cout << typeid("Hello"s).name() << std::endl;
   std::cout << typeid(std::array{ 1 , 2 , 3 }).name() << std::endl;
 #include <typeinfo>
+
   class A {};
   A a{};
   auto& t1 = typeid(a);
@@ -41,8 +74,20 @@ int main() {
   assert(std::string(ti1.name()) == std::string(ti2.name())); // 不保证
   assert(ti1.hash_code() == ti2.hash_code()); // 保证
 
+  ifstream input("name.txt");
+  std::string name;
+  input >> name;
+
+  stream.open("city.txt", ios::out | ios::app);
+
   std::cin.get();
 }
+
+
+
+
+
+
 
 #if 0
 
@@ -88,7 +133,7 @@ void modifyBirthYear(date::year year) {
 int main() {
   std::array<char , 12> a{ "Hello 1024!" };
   std::string s{};
-  std::for_each(a.begin() , a.end() , [&](decltype(a[ 0 ])& x) {if (!std::isalpha(x)) s += x; });
+  std::for_each(a.begin() , a.end() , [&](decltype(a[ 0 ]) & x) {if (!std::isalpha(x)) s += x; });
 
   if (std::all_of(s.begin() , s.end() , isalpha))
     std::cout << "All elements are character" << std::endl;
