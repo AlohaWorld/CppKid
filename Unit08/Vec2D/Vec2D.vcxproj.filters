@@ -18,10 +18,21 @@
     <ClCompile Include="TestVec2D.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="Vec2D.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Text Include="TODO01.txt">
       <Filter>资源文件</Filter>
     </Text>
+    <Text Include="TODO02.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Vec2D.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

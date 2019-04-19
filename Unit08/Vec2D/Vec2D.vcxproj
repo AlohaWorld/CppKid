@@ -124,9 +124,14 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="TestVec2D.cpp" />
+    <ClCompile Include="Vec2D.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="TODO01.txt" />
+    <Text Include="TODO02.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Vec2D.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
