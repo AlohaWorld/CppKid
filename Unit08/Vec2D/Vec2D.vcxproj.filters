@@ -29,6 +29,30 @@
     <Text Include="TODO02.txt">
       <Filter>资源文件</Filter>
     </Text>
+    <Text Include="TODO03.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="TODO04.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="TODO05.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="TODO06.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="TODO07.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="TODO08.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="TODO09.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="TODO10.txt">
+      <Filter>资源文件</Filter>
+    </Text>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Vec2D.h">

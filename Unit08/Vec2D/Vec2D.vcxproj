@@ -129,6 +129,14 @@
   <ItemGroup>
     <Text Include="TODO01.txt" />
     <Text Include="TODO02.txt" />
+    <Text Include="TODO03.txt" />
+    <Text Include="TODO04.txt" />
+    <Text Include="TODO05.txt" />
+    <Text Include="TODO06.txt" />
+    <Text Include="TODO07.txt" />
+    <Text Include="TODO08.txt" />
+    <Text Include="TODO09.txt" />
+    <Text Include="TODO10.txt" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Vec2D.h" />

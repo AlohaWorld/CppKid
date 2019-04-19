@@ -1,0 +1,5 @@
+本部分要展示的内容如下：
+
+实现Vec2D的流操作运算符
+friend operator <<(ostream& os, Vec2D v);
+friend operator >> (istream& is, Vec2D v);
