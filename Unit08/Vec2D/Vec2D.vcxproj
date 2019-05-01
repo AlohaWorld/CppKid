@@ -136,7 +136,6 @@
     <Text Include="TODO07.txt" />
     <Text Include="TODO08.txt" />
     <Text Include="TODO09.txt" />
-    <Text Include="TODO10.txt" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Vec2D.h" />

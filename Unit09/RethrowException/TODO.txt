@@ -1,0 +1,20 @@
+重抛异常
+
+本部分要展示的内容如下：
+
+
+展示在catch中用throw重抛异常的效果。
+
+函数f {
+ try
+ catch
+   throw
+}
+
+main
+  try
+    f()
+  catch
+    do something
+
+

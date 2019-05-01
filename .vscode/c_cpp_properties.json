@@ -1,7 +1,7 @@
 
 {
     "env":{
-        "windowsKitInclude" : "C:/Program Files (x86)Windows Kits/10/Include",
+        "windowsKitInclude" : "C:/Program Files (x86)/Windows Kits/10/Include",
         "windowsSdkVersion": "10.0.17763.0",
         "msvcVersion": "14.16.27023",
         "vsVersion" : "2017"
