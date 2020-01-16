@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?fileVersion 4.0.0?><cproject storage_type_id="org.eclipse.cdt.core.XmlProjectDescriptionStorage">
+    	
+    <storageModule moduleId="org.eclipse.cdt.core.settings">
+        		
+        <cconfiguration id="org.eclipse.cdt.msvc.exe.debug.237036557">
+            			
+            <storageModule buildSystemId="org.eclipse.cdt.managedbuilder.core.configurationDataProvider" id="org.eclipse.cdt.msvc.exe.debug.237036557" moduleId="org.eclipse.cdt.core.settings" name="调试">
+                				
+                <externalSettings/>
+                				
+                <extensions>
+                    					
+                    <extension id="org.eclipse.cdt.core.PE" point="org.eclipse.cdt.core.BinaryParser"/>
+                    					
+                    <extension id="org.eclipse.cdt.core.GASErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+                    					
+                    <extension id="org.eclipse.cdt.core.GLDErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+                    					
+                    <extension id="org.eclipse.cdt.core.GCCErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+                    				
+                </extensions>
+                			
+            </storageModule>
+            			
+            <storageModule moduleId="cdtBuildSystem" version="4.0.0">
+                				
+                <configuration artifactName="${ProjName}" buildArtefactType="org.eclipse.cdt.build.core.buildArtefactType.exe" buildProperties="org.eclipse.cdt.build.core.buildArtefactType=org.eclipse.cdt.build.core.buildArtefactType.exe,org.eclipse.cdt.build.core.buildType=org.eclipse.cdt.build.core.buildType.debug" description="" id="org.eclipse.cdt.msvc.exe.debug.237036557" name="调试" parent="org.eclipse.cdt.msvc.exe.debug">
+                    					
+                    <folderInfo id="org.eclipse.cdt.msvc.exe.debug.237036557." name="/" resourcePath="">
+                        						
+                        <toolChain id="cdt.managedbuild.toolchain.gnu.mingw.base.1525035852" name="MinGW GCC" superClass="cdt.managedbuild.toolchain.gnu.mingw.base">
+                            							
+                            <targetPlatform archList="all" binaryParser="org.eclipse.cdt.core.PE" id="cdt.managedbuild.target.gnu.platform.mingw.base.687458950" name="调试平台" osList="win32" superClass="cdt.managedbuild.target.gnu.platform.mingw.base"/>
+                            							
+                            <builder buildPath="${workspace_loc:/StructuredBinding2}/调试" id="cdt.managedbuild.tool.gnu.builder.mingw.base.9402497" name="CDT 内部构建器.调试" superClass="cdt.managedbuild.tool.gnu.builder.mingw.base"/>
+                            							
+                            <tool id="cdt.managedbuild.tool.gnu.assembler.mingw.base.454021151" name="GCC 汇编器" superClass="cdt.managedbuild.tool.gnu.assembler.mingw.base">
+                                								
+                                <inputType id="cdt.managedbuild.tool.gnu.assembler.input.1489074405" superClass="cdt.managedbuild.tool.gnu.assembler.input"/>
+                                							
+                            </tool>
+                            							
+                            <tool id="cdt.managedbuild.tool.gnu.archiver.mingw.base.1103499873" name="GCC 归档器" superClass="cdt.managedbuild.tool.gnu.archiver.mingw.base"/>
+                            							
+                            <tool id="cdt.managedbuild.tool.gnu.cpp.compiler.mingw.base.788341220" name="GNU C++ 编译器" superClass="cdt.managedbuild.tool.gnu.cpp.compiler.mingw.base">
+                                								
+                                <option id="gnu.cpp.compiler.option.optimization.level.1059803712" superClass="gnu.cpp.compiler.option.optimization.level" value="gnu.cpp.compiler.optimization.level.none" valueType="enumerated"/>
+                                								
+                                <option defaultValue="gnu.cpp.compiler.debugging.level.max" id="gnu.cpp.compiler.option.debugging.level.1640389179" superClass="gnu.cpp.compiler.option.debugging.level" valueType="enumerated"/>
+                                								
+                                <inputType id="cdt.managedbuild.tool.gnu.cpp.compiler.input.951961007" superClass="cdt.managedbuild.tool.gnu.cpp.compiler.input"/>
+                                							
+                            </tool>
+                            							
+                            <tool id="cdt.managedbuild.tool.gnu.c.compiler.mingw.base.2029497992" name="GNU C 编译器" superClass="cdt.managedbuild.tool.gnu.c.compiler.mingw.base">
+                                								
+                                <option defaultValue="gnu.c.optimization.level.none" id="gnu.c.compiler.option.optimization.level.740187015" superClass="gnu.c.compiler.option.optimization.level" valueType="enumerated"/>
+                                								
+                                <option defaultValue="gnu.c.debugging.level.max" id="gnu.c.compiler.option.debugging.level.111939267" superClass="gnu.c.compiler.option.debugging.level" valueType="enumerated"/>
+                                								
+                                <inputType id="cdt.managedbuild.tool.gnu.c.compiler.input.1114483219" superClass="cdt.managedbuild.tool.gnu.c.compiler.input"/>
+                                							
+                            </tool>
+                            							
+                            <tool id="cdt.managedbuild.tool.gnu.c.linker.mingw.base.694014717" name="MinGW C 链接器" superClass="cdt.managedbuild.tool.gnu.c.linker.mingw.base"/>
+                            							
+                            <tool id="cdt.managedbuild.tool.gnu.cpp.linker.mingw.base.661094199" name="MinGW C++ 链接器" superClass="cdt.managedbuild.tool.gnu.cpp.linker.mingw.base">
+                                								
+                                <inputType id="cdt.managedbuild.tool.gnu.cpp.linker.input.1842889687" superClass="cdt.managedbuild.tool.gnu.cpp.linker.input">
+                                    									
+                                    <additionalInput kind="additionalinputdependency" paths="$(USER_OBJS)"/>
+                                    									
+                                    <additionalInput kind="additionalinput" paths="$(LIBS)"/>
+                                    								
+                                </inputType>
+                                							
+                            </tool>
+                            						
+                        </toolChain>
+                        					
+                    </folderInfo>
+                    				
+                </configuration>
+                			
+            </storageModule>
+            			
+            <storageModule moduleId="org.eclipse.cdt.core.externalSettings"/>
+            		
+        </cconfiguration>
+        		
+        <cconfiguration id="org.eclipse.cdt.msvc.exe.release.151335559">
+            			
+            <storageModule buildSystemId="org.eclipse.cdt.managedbuilder.core.configurationDataProvider" id="org.eclipse.cdt.msvc.exe.release.151335559" moduleId="org.eclipse.cdt.core.settings" name="发布">
+                				
+                <externalSettings/>
+                				
+                <extensions>
+                    					
+                    <extension id="org.eclipse.cdt.core.PE" point="org.eclipse.cdt.core.BinaryParser"/>
+                    					
+                    <extension id="org.eclipse.cdt.core.VCErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+                    				
+                </extensions>
+                			
+            </storageModule>
+            			
+            <storageModule moduleId="cdtBuildSystem" version="4.0.0">
+                				
+                <configuration artifactName="${ProjName}" buildArtefactType="org.eclipse.cdt.build.core.buildArtefactType.exe" buildProperties="org.eclipse.cdt.build.core.buildArtefactType=org.eclipse.cdt.build.core.buildArtefactType.exe,org.eclipse.cdt.build.core.buildType=org.eclipse.cdt.build.core.buildType.release" description="" id="org.eclipse.cdt.msvc.exe.release.151335559" name="发布" parent="org.eclipse.cdt.msvc.exe.release">
+                    					
+                    <folderInfo id="org.eclipse.cdt.msvc.exe.release.151335559." name="/" resourcePath="">
+                        						
+                        <toolChain id="org.eclipse.cdt.msvc.toolchain.exe.release.683436530" name="Microsoft Visual C++" superClass="org.eclipse.cdt.msvc.toolchain.exe.release">
+                            							
+                            <targetPlatform id="org.eclipse.cdt.msvc.targetPlatform.exe.release.273100802" superClass="org.eclipse.cdt.msvc.targetPlatform.exe.release"/>
+                            							
+                            <builder buildPath="${workspace_loc:/StructuredBinding2}/发布" id="org.eclipse.cdt.msvc.builder.537715489" keepEnvironmentInBuildfile="false" managedBuildOn="true" name="CDT 内部构建器" superClass="org.eclipse.cdt.msvc.builder"/>
+                            							
+                            <tool id="org.eclipse.cdt.msvc.cl.c.exe.release.1013171561" name="C Compiler (cl)" superClass="org.eclipse.cdt.msvc.cl.c.exe.release">
+                                								
+                                <option id="org.eclipse.cdt.msvc.cl.option.optimization.136701073" name="Optimization" superClass="org.eclipse.cdt.msvc.cl.option.optimization"/>
+                                								
+                                <option id="org.eclipse.cdt.msvc.cl.option.debugFormat.600353319" name="Debug Information Format" superClass="org.eclipse.cdt.msvc.cl.option.debugFormat"/>
+                                								
+                                <inputType id="org.eclipse.cdt.msvc.cl.inputType.c.289475465" superClass="org.eclipse.cdt.msvc.cl.inputType.c"/>
+                                							
+                            </tool>
+                            							
+                            <tool id="org.eclipse.cdt.msvc.cl.exe.release.937076188" name="C++ Compiler (cl)" superClass="org.eclipse.cdt.msvc.cl.exe.release">
+                                								
+                                <option id="org.eclipse.cdt.msvc.cl.option.optimization.1830195428" name="Optimization" superClass="org.eclipse.cdt.msvc.cl.option.optimization"/>
+                                								
+                                <option id="org.eclipse.cdt.msvc.cl.option.debugFormat.1808960396" name="Debug Information Format" superClass="org.eclipse.cdt.msvc.cl.option.debugFormat"/>
+                                								
+                                <inputType id="org.eclipse.cdt.msvc.cl.inputType.1799401391" superClass="org.eclipse.cdt.msvc.cl.inputType"/>
+                                							
+                            </tool>
+                            							
+                            <tool id="org.eclipse.cdt.msvc.rc.exe.release.992211556" name="Resource Compiler (rc)" superClass="org.eclipse.cdt.msvc.rc.exe.release">
+                                								
+                                <inputType id="org.eclipse.cdt.msvc.rc.inputType.903451784" superClass="org.eclipse.cdt.msvc.rc.inputType"/>
+                                							
+                            </tool>
+                            							
+                            <tool id="org.eclipse.cdt.msvc.link.exe.release.470195830" name="Linker (link)" superClass="org.eclipse.cdt.msvc.link.exe.release">
+                                								
+                                <inputType id="org.eclipse.cdt.msvc.link.inputType.166860130" superClass="org.eclipse.cdt.msvc.link.inputType"/>
+                                							
+                            </tool>
+                            							
+                            <tool id="org.eclipse.cdt.msvc.lib.1677261218" name="Library Manager (lib)" superClass="org.eclipse.cdt.msvc.lib"/>
+                            						
+                        </toolChain>
+                        					
+                    </folderInfo>
+                    				
+                </configuration>
+                			
+            </storageModule>
+            			
+            <storageModule moduleId="org.eclipse.cdt.core.externalSettings"/>
+            		
+        </cconfiguration>
+        	
+    </storageModule>
+    	
+    <storageModule moduleId="cdtBuildSystem" version="4.0.0">
+        		
+        <project id="StructuredBinding2.org.eclipse.cdt.msvc.projectType.exe.421203427" name="可执行文件" projectType="org.eclipse.cdt.msvc.projectType.exe"/>
+        	
+    </storageModule>
+    	
+    <storageModule moduleId="scannerConfiguration">
+        		
+        <autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId=""/>
+        		
+        <scannerConfigBuildInfo instanceId="org.eclipse.cdt.msvc.exe.debug.237036557;org.eclipse.cdt.msvc.exe.debug.237036557.;org.eclipse.cdt.msvc.cl.c.exe.debug.822583834;org.eclipse.cdt.msvc.cl.inputType.c.1953224077">
+            			
+            <autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId="org.eclipse.cdt.msw.build.clScannerInfo"/>
+            		
+        </scannerConfigBuildInfo>
+        		
+        <scannerConfigBuildInfo instanceId="org.eclipse.cdt.msvc.exe.debug.237036557;org.eclipse.cdt.msvc.exe.debug.237036557.;org.eclipse.cdt.msvc.cl.exe.debug.1602880033;org.eclipse.cdt.msvc.cl.inputType.548497000">
+            			
+            <autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId="org.eclipse.cdt.msw.build.clScannerInfo"/>
+            		
+        </scannerConfigBuildInfo>
+        	
+    </storageModule>
+    	
+    <storageModule moduleId="org.eclipse.cdt.core.LanguageSettingsProviders"/>
+    	
+    <storageModule moduleId="refreshScope" versionNumber="2">
+        		
+        <configuration configurationName="调试">
+            			
+            <resource resourceType="PROJECT" workspacePath="/StructuredBinding2"/>
+            		
+        </configuration>
+        		
+        <configuration configurationName="发布">
+            			
+            <resource resourceType="PROJECT" workspacePath="/StructuredBinding2"/>
+            		
+        </configuration>
+        	
+    </storageModule>
+    	
+    <storageModule moduleId="org.eclipse.cdt.make.core.buildtargets"/>
+    	
+    <storageModule moduleId="org.eclipse.cdt.internal.ui.text.commentOwnerProjectMappings"/>
+    
+</cproject>

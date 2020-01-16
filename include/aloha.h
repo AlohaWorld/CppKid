@@ -3,77 +3,129 @@
 #include <iostream>
 #include <string>
 #include <array>
- /**
-  * @file        aloha.h
-  *
-  * @brief       A set of helper functions for C++ newbie
-  *              Most of the codes are pulled from stackoverflow.com or cppreference.com
-  *
-  * @author      Cyd
-  * @date        2019/3/3
-  */
-/*
- * This is a developer tool.
- * The given macros will print messages to the compiling outputs.
- * This tool contains 3 macros:
- *    DEVELOPER_MESSAGE(msg)
- *        This macro will send msg to the compiling outputs.
+#include <type_traits>
+#include <utility>
+#include <tuple>
+/**
+ * @file        aloha.h
  *
- *    DEVELOPER_FIXME(msg)
- *        This macro will send msg with a prefix "[ FIXME: ]" to the compiling
- *        outputs.
+ * @author      Cyd
  *
- *    DEVELOPER_TODO(msg)
- *        this macro will send msg with a prefix "[ TODO: ]" to the compiling
- *        outputs.
+ * @date        2019/3/3
  *
- * USAGE:
- *    1. include this header file in your program
- *        #include "developer.h"
- *    2. compile your program in Debug mode (which the macro "NDEBUG" will be undefined)
- *    3. if you have used these macros in your codes and you want to supress
- *       these compiling messages, just compile your program in Release mode or #define NDEBUG
- *
+ * @brief       A set of helper functions and macros for C++ newbie
+ *              Most of the codes are pulled from stackoverflow.com or cppreference.com
  */
 
+///////////////////////////////////////////////////////////////////////////////
+///  The folowing block deal with "Stringizing an identifier"
+///
 
-  ///< If this file is compiled in Debug mode, the following Macro will work
-#ifndef NDEBUG
-#define STRING2(x) #x
-#define STRING(x) STRING2(x)
+#pragma message("Check naming collions: QUOTEID / QUOTE")
+
+/**
+ * @def QUOTEID(identifier)
+ * @brief This is a Macro. It turns an identifier to a string: "identifier"
+ */
+#define QUOTEID(identifier) #identifier
+
+/**
+ * @def QUOTE(m)
+ * @brief This is a Macro. It turns the value (other than the name or identifier) of the macro to a string
+ * @param m It's an identifier, a name or a macro
+ */
+#define QUOTE(m) QUOTEID(m)
+
+///////////////////////////////////////////////////////////////////////////////
+///  Dealing with the incompatibility of _Pragma() operator in Microsoft Visual
+///  Studio
+///
+
 #ifdef _MSC_VER
  // VC++2017 does NOT support keyword _Pragma in c++11
  // And #pragma message does NOT output the source filename and line No.
 #define PRAGMA(x) __pragma(x)
-#define FILENAME_AND_LINENUMBER STRING(__FILE__) ":" STRING(__LINE__) " "
 #else
 #define PRAGMA(x) _Pragma(#x) // Assuming other compilers compatible with C++11 support _Pragma
 #define FILENAME_AND_LINENUMBER
 #endif
 
- /**
-  * Show msg in compiling output messages
-  */
-  // Common msg to developers
+///////////////////////////////////////////////////////////////////////////////
+/// Show developer messages in compiling outputs
+///
+/// USAGE:
+/// 1. Include this header file in your program
+/// #include "aloha.h"
+/// 2. Use these macros
+/// 3. When compiling the source codes, the information appears in compiling
+///    outputs
+///
+/// List of Macros:
+/// DEVELOPER_MESSAGE(msg)
+/// DEVELOPER_FIXME(msg)
+/// DEVELOPER_TODO(msg)
+
+/**
+ * @def FILENAME_AND_LINENUMBER
+ *
+ * @brief Combine __FILE__ and __LINE__ to a single string
+ */
+#define FILENAME_AND_LINENUMBER QUOTE(__FILE__) ":" QUOTE(__LINE__) " "
+
+/**
+ * @def DEVELOPER_MESSAGE(msg)
+ *
+ * @brief Common msg to developers
+ *
+ * @param msg The message that will be shown in the compiling outputs
+ *
+ * This macro will show a message in the compiling outputs while the source code
+ * file being compiled
+ */
 #define DEVELOPER_MESSAGE(msg) PRAGMA(message (FILENAME_AND_LINENUMBER msg))
-  // "FixMe" msg to developers : there are bugs here
+
+/**
+ * @def DEVELOPER_FIXME(msg)
+ *
+ * @brief FIXME msg to developers
+ *
+ * @param msg The message that will be shown in the compiling outputs
+ *
+ * This macro will show a message with a prefix [ FIXME ] in the compiling
+ * outputs while the source code file being compiled.
+ * Usually this indicates there are bugs in the specific lines
+ */
 #define DEVELOPER_FIXME(msg) PRAGMA(message (FILENAME_AND_LINENUMBER "[ FIXME ]: " msg))
-  // "ToDo" msg to developers : we need to do something here
+
+/**
+ * @def DEVELOPER_TODO(msg)
+ *
+ * @brief TODO msg to developers
+ *
+ * @param msg The message that will be shown in the compiling outputs
+ *
+ * This macro will show a message with a prefix [ TODO ] in the compiling
+ * outputs while the source code file being compiled.
+ * Usually this indicates there are some works to be done
+ */
 #define DEVELOPER_TODO(msg) PRAGMA(message (FILENAME_AND_LINENUMBER "[ TODO ]: " msg))
 
 /**
- * Print the variable's name and value for debugging
+ * @def PRINT(x)
+ *
+ * @brief Print the variable's name and value for debugging
+ *
+ * Generally, PRINT(x) will print the name of the identifier "x", followed by
+ * the value of x, which looks like:  x : 120
+ * With "prettyprint.hpp", If x is a STL container object, then the contents
+ * of x is printed in such form:  x : [1, 4, 67, 321]
+ *
+ * @see https://github.com/louisdx/cxx-prettyprint
  */
-#define PRINT(x) std::cout << #x << ": " << x << std::endl;
-
-#else
-#define DEVELOPER_MESSAGE(msg)
-#define DEVELOPER_FIXME(msg)
-#define DEVELOPER_TODO(msg)
-#endif
+#include "prettyprint.hpp"
+#define PRINT(x) std::cout << #x << "  : " << x << std::endl
 
 namespace aloha {
-
   /**
    * @fn        static void Aloha::pause(std::string hints = "Press any key to continue.")
    *
@@ -90,8 +142,7 @@ namespace aloha {
    * pause() accepts one parameter which is a message to the user to tell what to do.
    * If no arguments are provided, pause will output "Press any key to continue."
    */
-  static void pause(const std::string& hints = "Press any key to continue.") {
-    // Pause the console windows when program terminates
+  void pause(const std::string &hints = "Press any key to continue.") {
     std::streamsize bufSize = std::cin.rdbuf()->in_avail();
     if (bufSize >= 1) {
       // extract and discard 1 character (CR) that remain in the input buffer
@@ -102,54 +153,44 @@ namespace aloha {
   }
 
   /**
-   * @def PRINT(x)
+   * @fn  template<typename T> std::ostream& operator<<(std::ostream& s , const std::vector<T>& v);
    *
-   * @brief       A macro that defines print
+   * @brief       Output the elements in a vector object.
+   *              Copy from https://en.cppreference.com/w/cpp/container/vector/vector
    *
-   * @param       x       A variable to print.
+   * @param [in,out]      s       A std::ostream to output to.
+   * @param               v       A std::vector&lt;T&gt; to process.
+   *
+   * @returns     The std::ostream object reference.
    */
 
-#define PRINT(x) std::cout << #x << ": " << x << std::endl;
-
-   /**
-    * @fn  template<typename T> std::ostream& operator<<(std::ostream& s , const std::vector<T>& v);
-    *
-    * @brief       Output the elements in a vector object.
-    *              Copy from https://en.cppreference.com/w/cpp/container/vector/vector
-    *
-    * @param [in,out]      s       A std::ostream to output to.
-    * @param               v       A std::vector&lt;T&gt; to process.
-    *
-    * @returns     The std::ostream object reference.
-    */
-
   template<typename T>
-  std::ostream& operator<<(std::ostream& s , const std::vector<T>& v) {
+  std::ostream &operator<<(std::ostream &s, const std::vector<T> &v) {
     s.put('[');
     char comma[ 3 ] = { '\0', ' ', '\0' };
-    for (const auto& e : v) {
+    for (const auto &e : v) {
       s << comma << e;
       comma[ 0 ] = ',';
     }
     return s << ']';
   }
 
-     /**
-    * @fn  template<typename T> std::ostream& operator<<(std::ostream& s , const std::array<T, int>& a);
-    *
-    * @brief       Output the elements in a array object.
-    *              Modified according to https://en.cppreference.com/w/cpp/container/vector/vector
-    *
-    * @param [in,out]      s       A std::ostream to output to.
-    * @param               a       A std::array&lt;T, int&gt; to process.
-    *
-    * @returns     The std::ostream object reference.
-    */
-  template<typename T , int N>
-  std::ostream& operator<<(std::ostream& s , const std::array<T , N>& a) {
+  /**
+ * @fn  template<typename T> std::ostream& operator<<(std::ostream& s , const std::array<T, int>& a);
+ *
+ * @brief       Output the elements in a array object.
+ *              Modified according to https://en.cppreference.com/w/cpp/container/vector/vector
+ *
+ * @param [in,out]      s       A std::ostream to output to.
+ * @param               a       A std::array&lt;T, int&gt; to process.
+ *
+ * @returns     The std::ostream object reference.
+ */
+  template<typename T, int N>
+  std::ostream &operator<<(std::ostream &s, const std::array<T, N> &a) {
     s.put('[');
     char comma[ 3 ] = { '\0', ' ', '\0' };
-    for (const auto& e : a) {
+    for (const auto &e : a) {
       s << comma << e;
       comma[ 0 ] = ',';
     }
