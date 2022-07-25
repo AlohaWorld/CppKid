@@ -1,13 +1,23 @@
-#include "Rectangle.h"
+import module1;
+import <iostream>;
 
-Rectangle::Rectangle(double w , double h, Color c, bool f) : width{ w } , height{ h }, Shape{c, f} {
-}
+export module module3;
+export class Rectangle;
 
-double Rectangle::getWidth() const { return width; }
-void Rectangle::setWidth(double w) { width = w; }
-double Rectangle::getHeight() const { return height; }
-void Rectangle::setHeight(double h) { height = h; }
+class Rectangle : public Shape {
+private:
+	double width{ 1.0 };
+	double height{ 1.0 };
+public:
+	Rectangle() = default;
+	Rectangle(double w, double h, Color c, bool f);
 
-double Rectangle::getArea() const {
-  return width * height;
-}
+	double getWidth() const;
+	void setWidth(double w);
+	double getHeight() const;
+	void setHeight(double h);
+
+	double getArea() const;
+};
+
+
