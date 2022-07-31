@@ -1,6 +1,5 @@
-#include <iostream>
-
-#include "Circle3.h"
+import <iostream>;
+import myModule;
 
 Circle::Circle () {
   radius = 1.0;
@@ -22,5 +21,5 @@ double Circle::getRadius() const {
 Circle& Circle::setRadius(double radius) {
   this->radius = radius;
   // return (Circle(radius));
-  return (*this); // this ָ��
+  return (*this); // this Ö¸Õë
 }

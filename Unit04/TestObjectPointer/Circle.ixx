@@ -1,6 +1,8 @@
 // TestObjectPointer/Circle.h  Author: cyd
 
-#pragma once
+import <iostream>;
+export module myModule;
+export class Circle;
 
 class Circle {
   double radius;

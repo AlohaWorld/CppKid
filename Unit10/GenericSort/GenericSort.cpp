@@ -1,1 +1,1 @@
-#include "GenericSort.h"
+import GenericSort;

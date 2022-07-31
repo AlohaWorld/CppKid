@@ -1,6 +1,6 @@
 // TotalArea/TotalArea.cpp  Author: cyd
-#include <iostream>
-#include "Circle.h"
+import <iostream>;
+import myModule;
 
 int main() {
 	Circle ca1[]{ Circle{1.0}, Circle{2.0}, Circle{3.0} };

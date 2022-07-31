@@ -1,7 +1,7 @@
 // TestObjectPointer/TestObjectPointer.cpp  Author: cyd
 
-#include <iostream>
-#include "Circle.h"
+import <iostream>;
+import myModule;
 
 int main() {
   auto* c1 = new Circle {1.0};

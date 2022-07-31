@@ -1,6 +1,6 @@
-//#ifndef CIRCLE_H_
-//#define CIRCLE_H_
-#pragma once
+import <iostream>;
+export module myModule;
+export class Circle;
 
 class Circle {
   double radius;
@@ -13,4 +13,4 @@ public:
   Circle& setRadius(double radius);
 };
 
-//#endif /* CIRCLE_H_ */
+

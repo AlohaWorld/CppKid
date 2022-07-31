@@ -1,6 +1,9 @@
-#include "Rectangle.h"
+import module3;
+import <string>;
+import <iostream>;
 
-Rectangle::Rectangle(double w , double h , Color c , bool f) : width{ w } , height{ h } , Shape{ c, f } {
+
+Rectangle::Rectangle(double w, double h, Color c, bool f) : width{ w }, height{ h }, Shape{ c, f } {
 }
 
 double Rectangle::getWidth() const { return width; }
@@ -9,11 +12,11 @@ double Rectangle::getHeight() const { return height; }
 void Rectangle::setHeight(double h) { height = h; }
 
 double Rectangle::getArea() const {
-  return width * height;
+    return width * height;
 }
 
-string Rectangle::toString() {
-  return ("Rectangle: width " + std::to_string(width) + ", "
-          + "height " + std::to_string(height) + ", "
-          + colorToString() + " " + filledToString());
+std::string Rectangle::toString() {
+    return ("Rectangle: width " + std::to_string(width) + ", "
+        + "height " + std::to_string(height) + ", "
+        + colorToString() + " " + filledToString());
 }

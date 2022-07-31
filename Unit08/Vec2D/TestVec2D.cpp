@@ -1,53 +1,55 @@
-#include <iostream>
-#include "Vec2D.h"
+import module1;
+
+import <iostream>;
+
 using std::cout;
 using std::endl;
 
 int main() {
-  // ´´½¨ÏòÁ¿¶ÔÏó
-  Vec2D v1{ 3,5 } , v2{ 4,6 };
+	// åˆ›å»ºå‘é‡å¯¹è±¡
+	Vec2D v1{ 3,5 }, v2{ 4,6 };
 
-  // ÏòÁ¿×ªÎª×Ö·û´®
-  cout << "v1 = " << v1.toString() << endl;
-  cout << "v2 = " << v2.toString() << endl;
-  // ÏòÁ¿¼Ó·¨£º ÏòÁ¿+ÏòÁ¿£¬ÏòÁ¿+Êı
-  Vec2D v3 = v1 + v2;
-  Vec2D v4 = v3 + 10.0;
-  cout << "v3 = " << v3.toString() << endl;
-  cout << "v4 = " << v4.toString() << endl;
-  // ÏòÁ¿¼õ·¨£¬ÏòÁ¿µã»ı£¬ÏòÁ¿Êı³Ë
-  Vec2D v5 = v2 - v1;
-  double v6 = v2 * v1;
-  Vec2D v7 = 2.1 * v3;
-  cout << "v2 - v1 = " << v5.toString() << endl;
-  cout << "v2 . v1 = " << v6 << endl;
-  cout << "v3 * 2.1 = " << (v3 * 2.1).toString() << endl;
-  cout << "2.1 * v3 = " << v7.toString() << endl;
+	// å‘é‡è½¬ä¸ºå­—ç¬¦ä¸²
+	cout << "v1 = " << v1.toString() << endl;
+	cout << "v2 = " << v2.toString() << endl;
+	// å‘é‡åŠ æ³•ï¼š å‘é‡+å‘é‡ï¼Œå‘é‡+æ•°
+	Vec2D v3 = v1 + v2;
+	Vec2D v4 = v3 + 10.0;
+	cout << "v3 = " << v3.toString() << endl;
+	cout << "v4 = " << v4.toString() << endl;
+	// å‘é‡å‡æ³•ï¼Œå‘é‡ç‚¹ç§¯ï¼Œå‘é‡æ•°ä¹˜
+	Vec2D v5 = v2 - v1;
+	double v6 = v2 * v1;
+	Vec2D v7 = 2.1 * v3;
+	cout << "v2 - v1 = " << v5.toString() << endl;
+	cout << "v2 . v1 = " << v6 << endl;
+	cout << "v3 * 2.1 = " << (v3 * 2.1).toString() << endl;
+	cout << "2.1 * v3 = " << v7.toString() << endl;
 
-  Vec2D va1{ 10, 12 } , va2{ 1, 2 };
-  cout << " va1 += va2 : " << (va1 += va2).toString() << endl;
-  cout << " va1 -= va2 : " << (va1 -= va2).toString() << endl;
-  // ÏòÁ¿Çó¸ºÖµ
-  Vec2D v8 = v2.negative();
-  cout << "-v2 = " << (-v2).toString() << endl;
-  // ÏòÁ¿×ÔÔö/×Ô¼õ
-  cout << "++v8 = " << (++v8).toString() << endl;
-  cout << "v8++ = " << (v8++).toString() << endl;
-  cout << "v8 = " << v8.toString() << endl;
-  cout << "--v2 = " << (--v2).toString() << endl;
-  // ¶ÁÈ¡»òÕßĞŞ¸ÄÏòÁ¿ÔªËØ
-  v1[ 0 ] = 31.1;
-  cout << "v1.x_ = " << v1[ 0 ] << endl;
-  cout << "v1.y_ = " << v1[ 1 ] << endl;
-  // v1[ 8 ] = 10.0;
-  // ÏòÁ¿µÄ³¤¶Èmagnitude ºÍ½Ç¶Èdirection
-  cout << "v1.magnitude = " << v1.magnitude() << endl;
-  cout << "double(v1) = " << static_cast<double>(v1) << endl;
-  cout << "v1.direction = " << v1.direction() << endl;
-  // ±È½ÏÁ½¸öÏòÁ¿
-  cout << "v1 compare v2 : " << v1.compareTo(v2) << endl;
-  cout << "Please input a Vec2D:";
-  Vec2D v9{};
-  std::cin >> v9; // operator>>(std::cin, v9);
-  cout << v9 << endl;
+	Vec2D va1{ 10, 12 }, va2{ 1, 2 };
+	cout << " va1 += va2 : " << (va1 += va2).toString() << endl;
+	cout << " va1 -= va2 : " << (va1 -= va2).toString() << endl;
+	// å‘é‡æ±‚è´Ÿå€¼
+	Vec2D v8 = v2.negative();
+	cout << "-v2 = " << (-v2).toString() << endl;
+	// å‘é‡è‡ªå¢/è‡ªå‡
+	cout << "++v8 = " << (++v8).toString() << endl;
+	cout << "v8++ = " << (v8++).toString() << endl;
+	cout << "v8 = " << v8.toString() << endl;
+	cout << "--v2 = " << (--v2).toString() << endl;
+	// è¯»å–æˆ–è€…ä¿®æ”¹å‘é‡å…ƒç´ 
+	v1[0] = 31.1;
+	cout << "v1.x_ = " << v1[0] << endl;
+	cout << "v1.y_ = " << v1[1] << endl;
+	// v1[ 8 ] = 10.0;
+	// å‘é‡çš„é•¿åº¦magnitude å’Œè§’åº¦direction
+	cout << "v1.magnitude = " << v1.magnitude() << endl;
+	cout << "double(v1) = " << static_cast<double>(v1) << endl;
+	cout << "v1.direction = " << v1.direction() << endl;
+	// æ¯”è¾ƒä¸¤ä¸ªå‘é‡
+	cout << "v1 compare v2 : " << v1.compareTo(v2) << endl;
+	cout << "Please input a Vec2D:";
+	Vec2D v9{};
+	std::cin >> v9; // operator>>(std::cin, v9);
+	cout << v9 << endl;
 }

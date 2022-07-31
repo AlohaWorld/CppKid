@@ -1,6 +1,6 @@
 // TestObjectPointer/Circle.cpp  Author: cyd
-#include <iostream>
-#include "Circle.h"
+import myModule;
+import <iostream>;
 
 Circle::Circle () {
   radius = 1.0;
