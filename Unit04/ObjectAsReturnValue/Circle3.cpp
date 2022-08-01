@@ -21,5 +21,5 @@ double Circle::getRadius() const {
 Circle& Circle::setRadius(double radius) {
   this->radius = radius;
   // return (Circle(radius));
-  return (*this); // this Ö¸Õë
+  return (*this); 
 }
