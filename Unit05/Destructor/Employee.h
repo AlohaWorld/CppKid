@@ -1,38 +1,44 @@
-// ÈÎÎñ1£ºÔö¼Ó¾²Ì¬³ÉÔ±£¬¼ÆËã¹ÍÔ±¶ÔÏóµÄÊıÁ¿
-// ÈÎÎñ2£º½«¹ÍÔ±ÀàµÄÉúÈÕ¸ÄÎªDate*ÀàĞÍµÄÖ¸Õë
-// ÈÎÎñ3£ºĞŞ¸Ä¹¹Ôìº¯ÊıºÍÎö¹¹º¯Êı
-#include <iostream>
-#include <string>
+// ä»»åŠ¡1ï¼šå¢åŠ é™æ€æˆå‘˜ï¼Œè®¡ç®—é›‡å‘˜å¯¹è±¡çš„æ•°é‡
+// ä»»åŠ¡2ï¼šå°†é›‡å‘˜ç±»çš„ç”Ÿæ—¥æ”¹ä¸ºDate*ç±»å‹çš„æŒ‡é’ˆ
+// ä»»åŠ¡3ï¼šä¿®æ”¹æ„é€ å‡½æ•°å’Œææ„å‡½æ•°
+import <iostream>;
+import <string>;
+import module1;
+
+export module module2;
+export enum class Gender;
+export class Employee;
+
 enum class Gender {
-  male ,
-  female ,
+    male,
+    female,
 };
 class Employee {
 private:
-  std::string name;
-  Gender gender;
-  Date* birthday;
-  static int numberOfObjects;
+    std::string name;
+    Gender gender;
+    Date* birthday;
+    static int numberOfObjects;
 public:
-  void setName(std::string name) { this->name = name; }
-  void setGender(Gender gender) { this->gender = gender; }
-  void setBirthday(Date birthday) { *(this->birthday) = birthday; }
-  std::string getName() { return name; }
-  Gender getGender() { return gender; }
-  Date getBirthday() { return *birthday; }
-  std::string toString() {
-    return (name + (gender == Gender::male ? std::string("male") : std::string("female")) + birthday->toString());
-  }
-  Employee(std::string name , Gender gender , Date birthday) :name{ name } , gender{ gender } {
-    numberOfObjects++;
-    this->birthday = new Date{ birthday };
-    std::cout << "Now there are : " << numberOfObjects << " employees" << std::endl;
-  }
-  Employee() : Employee("Alan" , Gender::male , Date(2000 , 4 , 1)) {}
-  ~Employee() {
-    numberOfObjects--;
-    delete birthday;
-    birthday = nullptr;
-    std::cout << "Now there are : " << numberOfObjects << " employees" << std::endl;
-  }
+    void setName(std::string name) { this->name = name; }
+    void setGender(Gender gender) { this->gender = gender; }
+    void setBirthday(Date birthday) { *(this->birthday) = birthday; }
+    std::string getName() { return name; }
+    Gender getGender() { return gender; }
+    Date getBirthday() { return *birthday; }
+    std::string toString() {
+        return (name + (gender == Gender::male ? std::string("male") : std::string("female")) + birthday->toString());
+    }
+    Employee(std::string name, Gender gender, Date birthday) :name{ name }, gender{ gender } {
+        numberOfObjects++;
+        this->birthday = new Date{ birthday };
+        std::cout << "Now there are : " << numberOfObjects << " employees" << std::endl;
+    }
+    Employee() : Employee("Alan", Gender::male, Date(2000, 4, 1)) {}
+    ~Employee() {
+        numberOfObjects--;
+        delete birthday;
+        birthday = nullptr;
+        std::cout << "Now there are : " << numberOfObjects << " employees" << std::endl;
+    }
 };
