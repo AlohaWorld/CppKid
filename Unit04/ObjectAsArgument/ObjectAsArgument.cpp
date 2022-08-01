@@ -1,12 +1,13 @@
 // ObjectAsArgument/ObjectAsArgument.cpp  Author: cyd
-#include <iostream>
+import myModule;
+import <iostream>;
 
-#include "Circle2.h"
 /*
 void print(Circle c) {
   std::cout << c.getArea() << std::endl;
 }
 */
+
 void print(Circle& c) {
   std::cout << c.getArea() << std::endl;
 }
@@ -21,6 +22,7 @@ int main() {
   print(ca+2);
   return (0);
 }
+
 
 
 
