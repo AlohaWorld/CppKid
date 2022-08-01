@@ -1,7 +1,5 @@
-#include "Circle.h"
-#include <iostream>
-//#include "Circle.cpp"
-#include "Circle.h"
+import myModule;
+import <iostream>;
 
 int main() {
   Circle c1;
@@ -11,4 +9,3 @@ int main() {
   std::cout << c2.getArea() << std::endl;
   return (0);
 }
-
