@@ -1,19 +1,16 @@
-#include <iostream>
-#include <iomanip>
-
-#include "SelectionSort.h"
+import SelectionSort;
 
 int main() {
-  std::array x{ 3.0, 2.0, 8.0, 4.0, 9.0, 1.0, 5.0, 6.0 };
+    std::array x{ 3.0, 2.0, 8.0, 4.0, 9.0, 1.0, 5.0, 6.0 };
 
-  for (auto i : x) {
-    std::cout << std::fixed << std::setprecision(2) << i << "  ";
-  }
-  std::cout << std::endl;
+    for (auto i : x) {
+        std::cout << std::fixed << std::setprecision(2) << i << "  ";
+    }
+    std::cout << std::endl;
 
-  selectionSort(x);
+    selectionSort(x);
 
-  for (auto i : x) {
-    std::cout << std::fixed << std::setprecision(2) << i << "  ";
-  }
+    for (auto i : x) {
+        std::cout << std::fixed << std::setprecision(2) << i << "  ";
+    }
 }
