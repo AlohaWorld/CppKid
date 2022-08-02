@@ -1,62 +1,61 @@
-#pragma once
-#include <iostream>
-#include <string>
-#include <cmath>
-#include <exception>
-#include <istream>
-#include <ostream>
+import <iostream>;
+import <string>;
+
+export module module1;
+export class Vec2D;
+
 class Vec2D {
 public:
-  Vec2D();
-  Vec2D(double , double);
-  ~Vec2D();
+	Vec2D();
+	Vec2D(double, double);
+	~Vec2D();
 private:
-  double x_;
-  double y_;
+	double x_;
+	double y_;
 public:
-  // ½«ÏòÁ¿×ª»»Îª×Ö·û´®ĞÎÊ½±íÊ¾
-  std::string toString();
-  // ÏòÁ¿¼Ó·¨
-  Vec2D add(const Vec2D& secondVec2D);
-  // ÏòÁ¿ºÍÊıÖµµÄ¼Ó·¨
-  Vec2D add(double numeral);
-  Vec2D operator+ (const Vec2D& secondVec2D);
-  Vec2D operator+ (const double numeral);
-  Vec2D& operator += (const Vec2D& secondVec2D); // v1+=3.0+=v2;
-  // ÏòÁ¿¼õ·¨
-  Vec2D subtract(const Vec2D& secondVec2D);
-  Vec2D subtract(double numeral);
-  Vec2D operator -(const Vec2D& secondVec2D);
-  Vec2D operator -(double numeral);
-  Vec2D& operator -=(const Vec2D& secondVec2D);
-  // ÏòÁ¿µã»ı
-  double dot(const Vec2D& secondVec2D);
-  // ÏòÁ¿Êı³Ë
-  Vec2D multiply(double multiplier);
-  double operator *(const Vec2D& secondVec2D);
-  Vec2D  operator *(double multiplier);
-  friend Vec2D operator *(double multiplier , Vec2D vec2d);
-  // ÏòÁ¿Çó¸ºÖµ
-  Vec2D negative();
-  Vec2D operator -();
-  // ÏòÁ¿×ÔÔö1
-  Vec2D& increase();
-  Vec2D& operator ++();
-  Vec2D operator ++(int dummy);
-  // ÏòÁ¿×Ô¼õ1
-  Vec2D& decrease();
-  Vec2D& operator --();
-  Vec2D operator --(int dummy);
-  // ¶ÁÈ¡»òÕßĞŞ¸ÄÏòÁ¿ÔªËØ
-  double& at(const int index);
-  double& operator [] (const int& index);
-  // ÇóÏòÁ¿µÄ·¶Êı£¨³¤¶È)
-  double magnitude();
-  operator double();
-  // ÇóÏòÁ¿Óëx+ÖáµÄ¼Ğ½Ç
-  double direction();
-  // ±È½ÏÁ½¸öÏòÁ¿µÄ³¤¶È¡£Èç¹ûfirstVec2DĞ¡ÓÚsecondVec2D£¬·µ»Ø-1£¬Èô´óÓÚÔò·µ»Ø1£¬ÈôÏàµÈÔò·µ»Ø0
-  int compareTo(Vec2D secondVec2D);
-  friend std::ostream& operator <<(std::ostream& os , const Vec2D& v);
-  friend std::istream& operator >> (std::istream& is , Vec2D& v);
+	// å°†å‘é‡è½¬æ¢ä¸ºå­—ç¬¦ä¸²å½¢å¼è¡¨ç¤º
+	std::string toString();
+	// å‘é‡åŠ æ³•
+	Vec2D add(const Vec2D& secondVec2D);
+	// å‘é‡å’Œæ•°å€¼çš„åŠ æ³•
+	Vec2D add(double numeral);
+	Vec2D operator+ (const Vec2D& secondVec2D);
+	Vec2D operator+ (const double numeral);
+	Vec2D& operator += (const Vec2D& secondVec2D); // v1+=3.0+=v2;
+	// å‘é‡å‡æ³•
+	Vec2D subtract(const Vec2D& secondVec2D);
+	Vec2D subtract(double numeral);
+	Vec2D operator -(const Vec2D& secondVec2D);
+	Vec2D operator -(double numeral);
+	Vec2D& operator -=(const Vec2D& secondVec2D);
+	// å‘é‡ç‚¹ç§¯
+	double dot(const Vec2D& secondVec2D);
+	// å‘é‡æ•°ä¹˜
+	Vec2D multiply(double multiplier);
+	double operator *(const Vec2D& secondVec2D);
+	Vec2D  operator *(double multiplier);
+	friend Vec2D operator *(double multiplier, Vec2D vec2d);
+	// å‘é‡æ±‚è´Ÿå€¼
+	Vec2D negative();
+	Vec2D operator -();
+	// å‘é‡è‡ªå¢1
+	Vec2D& increase();
+	Vec2D& operator ++();
+	Vec2D operator ++(int dummy);
+	// å‘é‡è‡ªå‡1
+	Vec2D& decrease();
+	Vec2D& operator --();
+	Vec2D operator --(int dummy);
+	// è¯»å–æˆ–è€…ä¿®æ”¹å‘é‡å…ƒç´ 
+	double& at(const int index);
+	double& operator [] (const int& index);
+	// æ±‚å‘é‡çš„èŒƒæ•°ï¼ˆé•¿åº¦)
+	double magnitude();
+	operator double();
+	// æ±‚å‘é‡ä¸x+è½´çš„å¤¹è§’
+	double direction();
+	// æ¯”è¾ƒä¸¤ä¸ªå‘é‡çš„é•¿åº¦ã€‚å¦‚æœfirstVec2Då°äºsecondVec2Dï¼Œè¿”å›-1ï¼Œè‹¥å¤§äºåˆ™è¿”å›1ï¼Œè‹¥ç›¸ç­‰åˆ™è¿”å›0
+	int compareTo(Vec2D secondVec2D);
+	friend std::ostream& operator <<(std::ostream& os, const Vec2D& v);
+	friend std::istream& operator >> (std::istream& is, Vec2D& v);
 };
