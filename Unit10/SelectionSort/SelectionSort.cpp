@@ -1,23 +1,24 @@
-#include "SelectionSort.h"
+import SelectionSort;
+
 void selectionSort(double list[], const std::size_t size) {
-  // for Ñ­»·£¬Ã¿´Î´Ólist[i]~list[size-1]ÖĞÕÒ³öÒ»¸ö×îĞ¡µÄÊı£¬Óëlist[i]½»»»
-  for (std::size_t i = 0; i < size - 1; i++) {
-    // ³õÊ¼»¯£¬½« list[i]¼ÇÎª×îĞ¡Öµ£¬½«i¼ÇÎª×îĞ¡ÖµµÄË÷Òı
-    double min = list[ i ];
-    int index = i;
+    // for å¾ªç¯ï¼Œæ¯æ¬¡ä»list[i]~list[size-1]ä¸­æ‰¾å‡ºä¸€ä¸ªæœ€å°çš„æ•°ï¼Œä¸list[i]äº¤æ¢
+    for (std::size_t i = 0; i < size - 1; i++) {
+        // åˆå§‹åŒ–ï¼Œå°† list[i]è®°ä¸ºæœ€å°å€¼ï¼Œå°†iè®°ä¸ºæœ€å°å€¼çš„ç´¢å¼•
+        double min = list[i];
+        int index = i;
 
-    // ÓÃÑ­»·£¬ÕÒ³ölist[i+1]~list[size-1]ÖĞµÄ×îĞ¡ÖµºÍËüµÄÏÂ±ê
-    for (std::size_t j = i + 1; j < size; j++) {
-      if (min > list[ j ]) {
-        min = list[ j ];
-        index = j;
-      }
-    }
+        // ç”¨å¾ªç¯ï¼Œæ‰¾å‡ºlist[i+1]~list[size-1]ä¸­çš„æœ€å°å€¼å’Œå®ƒçš„ä¸‹æ ‡
+        for (std::size_t j = i + 1; j < size; j++) {
+            if (min > list[j]) {
+                min = list[j];
+                index = j;
+            }
+        }
 
-    // Èôlist[i]²»ÊÇ×îĞ¡Öµ£¬ÄÇÃ´½»»»list[i] <--> list[index]
-    if (index != i) {
-      list[ index ] = list[ i ];
-      list[ i ] = min;
+        // è‹¥list[i]ä¸æ˜¯æœ€å°å€¼ï¼Œé‚£ä¹ˆäº¤æ¢list[i] <--> list[index]
+        if (index != i) {
+            list[index] = list[i];
+            list[i] = min;
+        }
     }
-  }
 }

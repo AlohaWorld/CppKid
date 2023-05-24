@@ -1,6 +1,6 @@
 // ObjectAsReturnValue/ObjectAsReturnValue.cpp  Author: cyd
-#include <iostream>
-#include "Circle3.h"
+import myModule;
+import <iostream>;
 using namespace std;
 
 int main() {

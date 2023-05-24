@@ -1,5 +1,5 @@
-#include <iostream>
-#include "Circle.h"
+import myModule;
+import <iostream>;
 
 Circle::Circle () {
   radius = 1.0;

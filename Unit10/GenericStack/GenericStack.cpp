@@ -1,15 +1,14 @@
-#include "Stack.h"
-#include <iostream>
-#include <string>
-//2. ´´½¨Ò»¸ö×Ö·ûÕ»£¬½«Ò»¸ö×Ö·û´®µÄÄÚÈÝ·´×ªÊä³ö
-int main() {
-  Stack<char> c;
-  std::string s{ "Hello, World!" };
-  for (auto i : s) {
-    c.push(i);
-  }
+import module1;
 
-  for (; c.empty() != true; ) {
-    std::cout << c.pop();
-  }
+//2. åˆ›å»ºä¸€ä¸ªå­—ç¬¦æ ˆï¼Œå°†ä¸€ä¸ªå­—ç¬¦ä¸²çš„å†…å®¹åè½¬è¾“å‡º
+int main() {
+    Stack<char> c;
+    std::string s{ "Hello, World!" };
+    for (auto i : s) {
+        c.push(i);
+    }
+
+    for (; c.empty() != true; ) {
+        std::cout << c.pop();
+    }
 }
